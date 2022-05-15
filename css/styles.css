@@ -1,6 +1,9 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
+
     font-family: 'Roboto', sans-serif;
 }
 
@@ -11,6 +14,8 @@
     --morado: #4e148c;
     --morado-medio: #613dc1;
     --morado-claro: #858ae3;
+    --morado-transparente: #4e148c2c; 
+    --morado-transparente2: #4e148c0a; 
 
 }
 
@@ -18,10 +23,13 @@ h1 {
     font-weight: 300;
 }
 li, a, button {
-    text-decoration: none;
     color: var(--blanco);
 }
-
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
 
 /* Menú */
 
@@ -38,11 +46,16 @@ li, a, button {
     color: var(--blanco);
 }
 .nav__links li{
-    list-style: none;
-    padding: 8px;
-    display: inline-block;
-    padding: 0px 20px;
+    display: block;
+    padding: 4px 20px;
 }
+@media (min-width: 768px) {
+    .nav__links li{
+        display: inline-block;
+        padding: 0px 20px;
+    }
+}
+
 .nav__links li a{
     transition: all 0.3s ease 0s;
 }
@@ -51,10 +64,56 @@ li, a, button {
 }
 
 
+
 /* Contenido */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 0;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
 
 .contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.consola {
+    text-align: center;
+    border: 2px solid var(--morado-transparente);
+    border-radius: 5px;
+    padding: 10px 10px 0px;
+}
+
+/* Aside */
+.categorias {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-color: var(--morado-transparente2);
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.categorias a {
+    transition: all 0.3s ease 0s;
+    color: var(--morado);
+}
+.categorias a:hover {
+    color: var(--morado-claro);
+    font-weight: bold;
+}
+
+.consola {
     
 }
+
 
 /* Footer */

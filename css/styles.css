@@ -14,6 +14,7 @@
     --morado: #4e148c;
     --morado-medio: #613dc1;
     --morado-claro: #858ae3;
+    --morado-claro-t: #858ae3a8;
     --morado-transparente: #4e148c2c; 
     --morado-transparente2: #4e148c0a; 
 
@@ -36,6 +37,11 @@ body {
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
+}
+@media (max-width: 667px) {
+    body {
+        min-height: 190vh;
+    }
 }
 
 /* Menú */
@@ -71,7 +77,6 @@ body {
 }
 
 
-
 /* Contenido */
 main {
     width: 90%;
@@ -83,11 +88,30 @@ main {
     grid-template-columns: 3fr 1fr;
     gap: 20px;
 }
+@media (max-width: 667px) {
+    main {    
+        grid-template-columns: 2fr 0fr;
+    }
+}
 
 .contenedor {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+}
+@media (min-width: 768px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+@media (min-width: 600) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
 .consola {
@@ -96,17 +120,36 @@ main {
     border-radius: 5px;
     padding: 10px 10px 0px;
 }
+.consola:hover {
+    border: 2px solid var(--morado-claro-t);
+}
+
+.consola a {
+    color: var(--morado-medio);
+    padding: 0px 5px 0px;
+}
+.consola a:hover {
+    color: var(--morado);
+    font-weight: bold;
+}
+
 
 /* Aside */
 .categorias {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    max-height: 50%;
 
     background-color: var(--morado-transparente2);
     border-radius: 5px;
     padding: 10px 10px;
     text-align: center;
+}
+@media (max-width: 667px) {
+    .categorias {
+        display: none;
+    }
 }
 
 .categorias a {
@@ -116,10 +159,6 @@ main {
 .categorias a:hover {
     color: var(--morado-claro);
     font-weight: bold;
-}
-
-.consola {
-    
 }
 
 

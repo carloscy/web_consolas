@@ -133,6 +133,32 @@ main {
     font-weight: bold;
 }
 
+/* Post */
+.contenedor-post {
+    text-align: justify;
+    line-height: 2;
+    padding: 0px 20px;
+}
+.contenedor-post img {
+    display: block;
+    margin: 0px auto;
+    border-radius: 5px;
+}
+.contenedor-post h1 {
+    font-weight: bold;
+    text-align: justify;
+}
+.contenedor-post p {
+    padding: 5px 0;
+}
+.fuente-info a {
+    color: var(--morado);
+    font-weight: bold;
+}
+.fuente-info a:hover {
+    color: var(--morado-medio);
+}
+
 
 /* Aside */
 .categorias {

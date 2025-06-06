@@ -54,7 +54,7 @@ body {
     background-color: var(--morado-oscuro);
 }
 
-.logo-header{
+.logo-header, .logo-footer{
     width: 200px;
     margin: 0;
 }

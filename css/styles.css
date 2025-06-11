@@ -49,6 +49,68 @@ body {
     padding: 20px 10%;
     background-color: var(--morado-oscuro);
 }
+/* Navbar general */
+.navegacion {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Botón de hamburguesa */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--blanco);
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Enlaces de navegación */
+.nav__links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav__links li a {
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav__links li a:hover {
+    background-color: var(--morado-transparente);
+    color: var(--morado-claro);
+    font-weight: bold;
+}
+
+/* Responsive: hamburguesa y menú oculto */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav__links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--morado-oscuro);
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+        width: 200px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        z-index: 999;
+    }
+
+    .nav__links.show {
+        display: flex;
+    }
+}
 
 .logo-header, .logo-footer{
     width: 200px;
@@ -203,4 +265,8 @@ picture {
     color: var(--blanco);
     background-color: var(--morado-oscuro);
     padding:30px 0;
+}
+.logo-footer {
+  display: block;
+  margin: 0 auto 20px auto;
 }

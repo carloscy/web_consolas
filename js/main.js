@@ -22,3 +22,11 @@ document.addEventListener("scroll", function () {
         topButton.style.display = "none";
     }
 });
+
+// abre/cierra menú en móvil
+const toggleBtn = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav__links');
+
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
